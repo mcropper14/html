@@ -1,0 +1,141 @@
+#include <RBD_Capacitance.h>
+#include <RBD_Threshold.h>
+#include <RBD_WaterSensor.h>
+ 
+RBD::WaterSensor water_sensor(2, 3, 3); // send, receive pin, levels
+ 
+void setup() {
+  Serial.begin(115200);
+  water_sensor.setLevel(1, 120);
+  water_sensor.setLevel(2, 154);
+  water_sensor.setLevel(3, 187);
+  water_sensor.setMaxLevel(220);
+}
+ 
+void loop() {
+  water_sensor.update();
+ 
+  if(water_sensor.onRawValueChange()) {
+    Serial.print("Active Level: ");
+    Serial.print(water_sensor.getActiveLevel());
+    Serial.print("  ---  ");
+    Serial.print("Raw Value: ");
+    Serial.println(water_sensor.getRawValue());
+  }
+}
+
+#include <RBD_Timer.h>
+#include <RBD_Button.h>
+ 
+RBD::Button button(2); // input_pullup by default
+ 
+void setup() {
+  Serial.begin(115200);
+}
+ 
+void loop() {
+  if(button.onPressed()) {
+    Serial.println("Button Pressed");
+  }
+ 
+  if(button.onReleased()) {
+    Serial.println("Button Released");
+  }
+}
+
+#include <RBD_Servo.h>
+ 
+RBD::Servo servo(2, 1000, 2000); // pin 2, 1ms - 2ms pulse
+ 
+void setup() {
+  servo.moveToDegrees(90);
+}
+ 
+void loop() {
+  servo.update();
+}
+
+#include <RBD_Capacitance.h>
+#include <RBD_Threshold.h>
+#include <RBD_HumanSensor.h>
+ 
+RBD::HumanSensor human_sensor(2, 3); // send, receive pin
+ 
+void setup() {
+  Serial.begin(115200);
+  human_sensor.setNearValue(100);
+  human_sensor.setTouchValue(200);
+  human_sensor.setPickupValue(300);
+}
+ 
+void loop() {
+  human_sensor.update();
+ 
+  if(human_sensor.onGone()) {
+    Serial.print("0. GONE   ");
+  }
+  else if(human_sensor.onNear()) {
+    Serial.print("1. NEAR   ");
+  }
+  else if(human_sensor.onTouch()) {
+    Serial.print("2. TOUCH  ");
+  }
+  else if(human_sensor.onPickup()) {
+    Serial.print("3. PICKUP ");
+  }
+ 
+  if(human_sensor.onRawValueChange()) {
+    Serial.println(human_sensor.getRawValue());
+  }
+}
+#include <RBD_Timer.h>
+ 
+RBD::Timer timer;
+ 
+void setup() {
+  Serial.begin(115200);
+  timer.setTimeout(3000);
+  timer.restart();
+}
+ 
+void loop() {
+  if(timer.onRestart()) {
+    Serial.println("Three seconds passed");
+  }
+}
+
+#include <RBD_Threshold.h>
+ 
+RBD::Threshold threshold(3); // 3 levels
+ 
+void setup() {
+  Serial.begin(115200);
+  threshold.setLevel(1,0);    // low
+  threshold.setLevel(2,10.5); // medium
+  threshold.setLevel(3,20);   // high
+  threshold.setMaxLevel(30);  // max
+}
+ 
+void loop() {
+  Serial.println(threshold.computeLevel(-1));   // 0 under
+  Serial.println(threshold.computeLevel(8));    // 1 low
+  Serial.println(threshold.computeLevel(10.6)); // 2 medium
+  Serial.println(threshold.computeLevel(30));   // 3 high
+  Serial.println(threshold.computeLevel(31));   // 4 over
+}
+ 
+#include <RBD_Capacitance.h>
+ 
+RBD::Capacitance cap_sensor(2, 3); // send, receive pins
+ 
+void setup() {
+  Serial.begin(115200);
+}
+ 
+void loop() {
+  cap_sensor.update();
+ 
+  if(cap_sensor.onChange()) {
+    Serial.println(cap_sensor.getValue());
+  }
+}
