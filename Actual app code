@@ -5,8 +5,49 @@ Myra Cropper @ 2019-01-25
 
 <?xml version="1.0" encoding="utf-8">
 <android.support.constraint.ConstraintLayout
+
+//mainPage
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width"match_parent"
-    android:layout
+ // layout 
+  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_length="match_parent"
+ // background 
+   android:background="0000FF"
+   android:background_menu="0680FF"
+   android:background_main="0003FF"
+ // layoutBehavior
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_behavior="@string/appbar_swipeRight_view_behavior"
+    app:layout_behavior"@string/appbar_swipeLeft_view_behavior"
+  // tools
+    tools:context="com.finepointmobile.git.MainActivity"
+    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_menu">
+
+<Button
+    // textLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_length"wrap_content"
+     // text
+     android:text="Main Menu"
+     android:textSize="40sp"
+     android:text="Options"
+     android:textSize="20sp"
+     android:text="Scroll"
+     android:textSize="20sp"
+     //textConstraint
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+     
+ </android.support.constraint.ConstraintLayout>    
+
+     
+     
+     
+   
