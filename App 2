@@ -1,0 +1,72 @@
+     
+ </android.support.constraint.ConstraintLayout>    
+    
+<Button_Right
+    // textLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_length"wrap_content"
+     // text
+     android:text="draw"
+     android:textSize="20sp"
+     android:text="pencil"
+     android:textSize="20sp"
+     android:text="brushstroke"
+     android:text="20sp"
+     android:text="crayon"
+     android:text="20sp"
+     android:text="paint"
+     android:text="20sp"
+     android:textSize="20sp"
+     //textConstraint
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+     
+ </android.support.constraint.ConstraintLayout>
+ 
+ //NewPage
+  diff --git a/app/src/main/res/layout/content_NewPage b/app/src/NewPage/res/layout/content_NewPage.xml
+  index 825cbe9..20d365d 100644
+  --- a/app/src/NewPage/res/layout/content/NewPage.xml
+  +++ b/app/src/NewPage/res/layout/content/NewPage.xml
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+ // layout 
+  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_length="match_parent"
+ // background 
+   android:background="0000FF"
+   android:background_menu="0680FF"
+   android:background_main="0003FF"
+ // layoutBehavior
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_behavior="@string/appbar_swipeRight_view_behavior"
+    app:layout_behavior"@string/appbar_swipeLeft_view_behavior"
+  // tools
+    tools:context="com.finepointmobile.git.MainActivity"
+    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_menu">
+    
+    <Button
+    // textLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_length"wrap_content"
+     // text
+     android:text="Select"
+     android:textSize="40sp"
+     android:text="Deselect"
+     android:textSize="30sp"
+     android:text="Delete"
+     android:textSize="20sp"
+     //textConstraint
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+     
+ </android.support.constraint.ConstraintLayout>    
