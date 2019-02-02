@@ -150,7 +150,7 @@ index 3ab3e9c..719c4e4 100644
  +   <color name="colorPrimary">#4cff00</color>
  +   <color name="colorPrimaryDark">#fff2000</color>
  +   <color name="colorAccent">#00000</color>    
-    <Button
+    <Button_2
     // textLayout
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
@@ -170,7 +170,7 @@ index 3ab3e9c..719c4e4 100644
      
  </android.support.constraint.ConstraintLayout>    
  
- <Button_Left 
+ <Button_Left_2`
        // textLayout
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
@@ -187,3 +187,26 @@ index 3ab3e9c..719c4e4 100644
      app:layout_constraintTop_toTopOf="parent"/>
      
  </android.support.constraint.ConstraintLayout>    
+<Button_Right_@
+    // textLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_length"wrap_content"
+     // text
+     android:text="Game Over"
+     android:textSize="40p"
+     android:text="You Win"
+     android:textSize="30sp"
+     android:text="You Lose"
+     android:text="30sp"
+     android:text="Play Again"
+     android:text="20sp"
+     android:text="Continue"
+     android:text="20sp"
+     //textConstraint
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+     
+ </android.support.constraint.ConstraintLayout>
