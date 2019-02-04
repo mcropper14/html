@@ -210,3 +210,13 @@ index 3ab3e9c..719c4e4 100644
      app:layout_constraintTop_toTopOf="parent"/>
      
  </android.support.constraint.ConstraintLayout>
+
+    // NewPage_2
+diff-- app/a/src/NewPage_2/src/resolution/content/NewPage_2/.xml
+@@ +9, 1 -9, +
+    ++ a/app/src/screen/resolution/layout/content 
+    -- a/app/src/screen/resolution/layout/content 
+    android:text "match parent" 
+@@ +5, 2, +2, 5 
+app: layout 
+    
