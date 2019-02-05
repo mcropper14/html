@@ -175,7 +175,63 @@ index 3ab3e9c..719c4e4 100644
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_length"wrap_content"
-     // text
+
+
+    handleTouch(touches: touches)
+}
+
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+}
+
+override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+    if delegate != nil{
+        delegate!.chartStopped()
+    }
+
+}
+
+private func handleTouch(touches:Set<UITouch>){
+    if touches.count == 1{
+        if let loc = touches.first?.location(in: self){
+            let xRawValue = getClosest(searchValue: Int(loc.x), arrayValue: self.xRaw)
+            let yRawValue = self.yRaw[self.xRaw.index(of: xRawValue)!
+            drawLines(xRawValue: xRawValue, yRawValue: yRawValue,lineLayer: lineLayer,circleLayer: circleLayer)
+            //self.lineLayerS.path = UIBezierPath().cgPath
+            //self.circleLayerS.path = UIBezierPath().cgPath
+            if delegate != nil{
+                delegate!.chartMoved(currentPrice: self.price, currentDate: self.date)
+            }
+        }
+    } else if touches.count == 2{
+        var touch = touches
+        let touchF = touch.popFirst()
+        if var loc1 = touchF?.location(in: self), var loc2 = touch.first?.location(in: self){
+            if loc1.x > loc2.x{
+                swap(&loc1, &loc2)
+            }
+
+
+            let xRawValue1 = getClosest(searchValue: Int(loc1.x), arrayValue: self.xRaw)
+            let xIndex1 = self.xRaw.index(of: xRawValue1)!
+
+            let yRawValue1 = self.yRaw[xIndex1]
+
+            let xRawValue2 = getClosest(searchValue: Int(loc2.x), arrayValue: self.xRaw)
+            let xIndex2 = self.xRaw.index(of: xRawValue2)!
+
+            let yRawValue2 = self.yRaw[xIndex2]
+private func drawLines(xRawValue xV:Int,yRawValue yV:Int,lineLayer:CAShapeLayer,circleLayer:CAShapeLayer){
+    let line = UIBezierPath(rect: CGRect(x: xV, y:0, width: 1, height: Int(self.frame.height)))
+    lineLayer.path = line.cgPath
+    lineLayer.strokeColor = UIColor.black.cgColor
+    circleLayer.path = UIBezierPath(ovalIn: CGRect(x: xV-4, y: yV-4, width: 8, height: 8)).cgPath;
+    circleLayer.strokeColor = Colors.blueDark.cgColor
+    circleLayer.fillColor = Colors.blueDark.cgColor
+    self.layer.addSublayer(circleLayer)
+}
+    // text
      android:text="CRASH"
      android:textSize="40sp"
      android:text="BANG"
