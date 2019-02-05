@@ -170,16 +170,13 @@ index 3ab3e9c..719c4e4 100644
      
  </android.support.constraint.ConstraintLayout>    
  
- <Button_Left_2`
+ <Button_Left_2
        // textLayout
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_length"wrap_content"
 
-
-    handleTouch(touches: touches)
-}
-
+func UITouch( Set: UITouch, touchesBegan, End: UITouch, touchesEnd) { 
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
 }
