@@ -158,7 +158,7 @@ index 3ab3e9c..719c4e4 100644
      // text
      android:text="Select"
      android:textSize="40sp"
-     android:text="Deselect"
+     android:text="Deselect" 
      android:textSize="30sp"
      android:text="Delete"
      android:textSize="20sp"
@@ -259,6 +259,9 @@ private func drawLines(xRawValue xV:Int,yRawValue yV:Int,lineLayer:CAShapeLayer,
      android:text="20sp"
      android:text="Continue"
      android:text="20sp"
+     privfunc handleTouch(touches: set<UI Touch)
+         if touches == count.1 
+         var touch = 0
      //scorecalcaltor
     var isTypyingNumber = false 
 var firstNumber:Int? = 0
