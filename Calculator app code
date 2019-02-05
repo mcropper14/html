@@ -1,0 +1,30 @@
+var isTypyingNumber = false 
+var firstNumber:Int? = 0
+var secondNumber:Int? = 0
+var operation = " "
+@IBAction func numberTapped(Sender:AnyObject){
+    var number = sender.currentTitle!
+
+    if isTypingNumber {
+        calculatorDisplay.text = calculatorDisplay.text! + number 
+    } else {
+        calculatorDisplay.text = number
+        isTypingNumber = true 
+       
+    }
+        }
+ @IBAction func calculationTapped(sender: AnyObject) {
+        isTypingNumber = false
+        firstNumber = calculatorDisplay.text?.toInt()!
+        operation = sender.currentTitle!
+ }      
+ @IBAction func equalsTapped(sender: AnyObject) {
+      isTypingNumber = false
+      var result = 0
+      secondNumber - calculatorDisplay.text?.toInt()
+      } else if operation == "+"{
+          result = firstNumber! + secondNumber!
+      } else if operation == "-"{
+          result = firstNumber! - secondNumber!
+      }
+calculatorDisplay.text = "\(result)"      
