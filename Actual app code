@@ -50,7 +50,7 @@ index 3ab3e9c..719c4e4 100644
     // textLayout
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:layout_length"wrap_content"
+     android:layout_length="wrap_content"
      // text
      android:text="Main Menu"
      android:textSize="40sp"
@@ -154,7 +154,7 @@ index 3ab3e9c..719c4e4 100644
     // textLayout
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:layout_length"wrap_content"
+     android:layout_length="wrap_content"
      // text
      android:text="Select"
      android:textSize="40sp"
@@ -259,6 +259,38 @@ private func drawLines(xRawValue xV:Int,yRawValue yV:Int,lineLayer:CAShapeLayer,
      android:text="20sp"
      android:text="Continue"
      android:text="20sp"
+     //scorecalcaltor
+    var isTypyingNumber = false 
+var firstNumber:Int? = 0
+var secondNumber:Int? = 0
+var operation = " "
+@IBAction func numberTapped(Sender:AnyObject){
+    var number = sender.currentTitle!
+
+    if isTypingNumber {
+        calculatorDisplay.text = calculatorDisplay.text! + number 
+    } else {
+        calculatorDisplay.text = number
+        isTypingNumber = true 
+       
+    }
+        }
+ @IBAction func calculationTapped(sender: AnyObject) {
+        isTypingNumber = false
+        firstNumber = calculatorDisplay.text?.toInt()!
+        operation = sender.currentTitle!
+ }      
+ @IBAction func equalsTapped(sender: AnyObject) {
+      isTypingNumber = false
+      var result = 0
+      secondNumber - calculatorDisplay.text?.toInt()
+      } else if operation == "+"{
+          result = firstNumber! + secondNumber!
+      } else if operation == "-"{
+          result = firstNumber! - secondNumber!
+      }
+calculatorDisplay.text = "\(result)"      or
+    
      //textConstraint
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintLeft_toLeftOf="parent"
@@ -274,5 +306,5 @@ diff-- app/a/src/NewPage_2/src/resolution/content/NewPage_2/.xml
     -- a/app/src/screen/resolution/layout/content 
     android:text "match parent" 
 @@ +5, 2, +2, 5 
-app: layout 
+
     
