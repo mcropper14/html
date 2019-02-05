@@ -269,6 +269,8 @@ var secondNumber:Int? = 0
 var operation = " "
 @IBAction func numberTapped(Sender:AnyObject){
     var number = sender.currentTitle!
+    let lockFunction = touch.sender
+    var touch = touches 
 
     if isTypingNumber {
         calculatorDisplay.text = calculatorDisplay.text! + number 
