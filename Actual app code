@@ -274,7 +274,12 @@ for element in
     var number = sender.currentTitle!
     let lockFunction = touch.sender
     var touch = touches 
-
+ given list: [-1, 0, 1]
+ total = 0
+ print(total)
+     While i <10:
+     Repeat {
+         Break 
     if isTypingNumber {
         calculatorDisplay.text = calculatorDisplay.text! + number 
     } else {
