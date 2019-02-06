@@ -266,6 +266,10 @@ private func drawLines(xRawValue xV:Int,yRawValue yV:Int,lineLayer:CAShapeLayer,
 var firstNumber:Int? = 0
 var secondNumber:Int? = 0
 var operation = " "
+len(a) = i
+print(total)
+given_list: [-1, 0, 1]
+for element in 
 @IBAction func numberTapped(Sender:AnyObject){
     var number = sender.currentTitle!
     let lockFunction = touch.sender
