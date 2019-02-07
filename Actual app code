@@ -176,7 +176,7 @@ index 3ab3e9c..719c4e4 100644
      android:layout_height="wrap_content"
      android:layout_length"wrap_content"
 var func = UITouchBegan
-
+func = 0
 func UITouch( Set: UITouch, touchesBegan, End: UITouch, touchesEnd) { 
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 repeat {
@@ -230,7 +230,8 @@ private func drawLines(xRawValue xV:Int,yRawValue yV:Int,lineLayer:CAShapeLayer,
     circleLayer.fillColor = Colors.blueDark.cgColor
     self.layer.addSublayer(circleLayer)
 }
-    // text
+    given_list
+   // text
      android:text="CRASH"
      android:textSize="40sp"
      android:text="BANG"
@@ -280,12 +281,20 @@ for element in
      While i <10:
      Repeat {
          Break 
+         i = i + 1
+         total = element + 1
+         print(total)
     if isTypingNumber {
         calculatorDisplay.text = calculatorDisplay.text! + number 
     } else {
         calculatorDisplay.text = number
         isTypingNumber = true 
-       
+         if else:
+         i < 10
+         print(total) 
+         len(given_list[i]
+         
+         
     }
         }
  @IBAction func calculationTapped(sender: AnyObject) {
