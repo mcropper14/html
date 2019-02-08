@@ -109,6 +109,9 @@ index 3ab3e9c..719c4e4 100644
      app:layout_constraintLeft_toLeftOf="parent"
      app:layout_constraintRight_toRightOf="parent"
      app:layout_constraintTop_toTopOf="parent"/>
+func = start game
+print("Start Game")
+def move(player, direction)
      
  </android.support.constraint.ConstraintLayout>
  
@@ -293,16 +296,26 @@ for element in
          i < 10
          print(total) 
          len(given_list[i]
-         
-         
-    }
-        }
- @IBAction func calculationTapped(sender: AnyObject) {
-        isTypingNumber = false
-        firstNumber = calculatorDisplay.text?.toInt()!
-        operation = sender.currentTitle!
+  
+  def addlist(list)
+  sum = 0
+  for item in my list:
+      if item%2 == 0
+      sum + = item 
+      break
+      if item < 550
+      print(total)
+      print("Game won") 
+      break 
+      if item = 0
+      print(0)
+      print("Game Lost")
+      print("Play Again")
+      
+    
+       operation = sender.currentTitle!
  }      
- @IBAction func equalsTapped(sender: AnyObject) {
+
       isTypingNumber = false
       var result = 0
       secondNumber - calculatorDisplay.text?.toInt()
@@ -315,7 +328,7 @@ calculatorDisplay.text = "\(result)"      or
     
      //textConstraint
      app:layout_constraintBottom_toBottomOf="parent"
-     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
      app:layout_constraintRight_toRightOf="parent"
      app:layout_constraintTop_toTopOf="parent"/>
      
@@ -330,3 +343,4 @@ diff-- app/a/src/NewPage_2/src/resolution/content/NewPage_2/.xml
 @@ +5, 2, +2, 5 
 
     
+ 
