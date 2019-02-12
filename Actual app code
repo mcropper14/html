@@ -296,23 +296,7 @@ for element in
          i < 10
          print(total) 
          len(given_list[i]
-  
-  def addlist(list)
-  sum = 0
-  for item in my list:
-      if item%2 == 0
-      sum + = item 
-      break
-      if item < 550
-      print(total)
-      print("Game won") 
-      break 
-      if item = 0
-      print(0)
-      print("Game Lost")
-      print("Play Again")
       
-    
        operation = sender.currentTitle!
  }      
 
@@ -326,6 +310,22 @@ for element in
       }
 calculatorDisplay.text = "\(result)"      or
     
+    
+    def addlist(list)
+  sum = 0
+  for item in my list:
+      if item%2 == 0
+      sum + = item 
+      break
+      if item < 550
+      print(total)
+      print("Game won") 
+      break 
+      if item = 0
+      print(0)
+      print("Game Lost")
+      print("Play Again")
+     
      //textConstraint
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintLeft_toLeftOf="parent"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
