@@ -9,6 +9,7 @@ void setup() {
   water_sensor.setLevel(1, 120);
   water_sensor.setLevel(2, 154);
   water_sensor.setLevel(3, 187);
+  water_sensor.setMinLevel(100);
   water_sensor.setMaxLevel(220);
 }
  
