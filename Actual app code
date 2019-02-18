@@ -112,7 +112,8 @@ index 3ab3e9c..719c4e4 100644
 func = start game
 print("Start Game")
 def move(player, direction)
-     
+ def move player = 1,2
+ def move direction = 3,4
  </android.support.constraint.ConstraintLayout>
  
  //NewPage
