@@ -342,6 +342,30 @@ diff-- app/a/src/NewPage_2/src/resolution/content/NewPage_2/.xml
     -- a/app/src/screen/resolution/layout/content 
     android:text "match parent" 
 @@ +5, 2, +2, 5 
-
+    diff --git/a/app/src/main/res/layout/content_main.xml b/app/src/main/res/layout/content_main.xml
+index 825cbe9..20d365d 100644
+---a/app/src/main/res/layout/content_main.xml
++++ b/app/src/main/res/layout/content_main.xml
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    @@ -5, 7 +5, 7 @@
+ // layout 
+  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_length="match_parent"
+ // background 
+   android:background="#0000FF"
+   android:background_menu="FF0000"
+   android:background_main="0000FF"
+ // layoutBehavior
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_behavior="@string/appbar_swipeRight_view_behavior"
+    app:layout_behavior"@string/appbar_swipeLeft_view_behavior"
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+index 3ab3e9c..719c4e4 100644
+--- a/app/src/main/res/values/colors.xml
++++ b/app/src/main/res/values/colors.xml
+@@ -1,6 +1,6 @@
     
  
